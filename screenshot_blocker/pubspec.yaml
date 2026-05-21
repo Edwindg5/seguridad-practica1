@@ -1,16 +1,21 @@
-name: screenshot_blocker
+# pubspec.yaml
+name: loginoutscreen
 description: "A new Flutter project."
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.12.0
+  sdk: ^3.11.0
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_windowmanager: ^0.2.0
+
+  # Librerías para detectar ubicación y fake GPS
+  location: ^7.0.0
+  permission_handler: ^11.3.1
+
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
