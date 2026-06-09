@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1071033295398",
+    "project_id": "screenshot-blocker",
+    "storage_bucket": "screenshot-blocker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071033295398:android:5a985834671ae6b62abce7",
+        "android_client_info": {
+          "package_name": "com.example.screenshot_blocker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGJcnGHD6ouMDa-Dws2gDCEChsdrldhag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
