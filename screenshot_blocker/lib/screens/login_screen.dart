@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/fake_gps_detector.dart';
+import '../services/inactivity_service.dart';
+import '../services/security_service.dart';
 import 'gps_check_screen.dart';
 import 'home_screen.dart';
 
@@ -19,6 +21,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
+    SecurityService.setSecure(true); // Bloquear capturas en Login
+    InactivityService().stop(); // detener timer en login
     FakeGPSDetector().onGPSStatusChanged = (status) {
       if (status == GPSStatus.fake && mounted) {
         Navigator.of(context).pushAndRemoveUntil(

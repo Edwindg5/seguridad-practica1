@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../services/secure_storage_service.dart';
 import '../services/fcm_service.dart';
+import '../services/inactivity_service.dart';
+import '../services/security_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,11 +26,15 @@ class _HomeScreenState extends State<HomeScreen> {
         _cargarDatos();
       }
     };
+
+    InactivityService().start(context);
+    SecurityService.setSecure(false); // Permitir capturas en Home
   }
 
   @override
   void dispose() {
     FCMService().onDataWiped = null;
+    InactivityService().stop();
     super.dispose();
   }
 
